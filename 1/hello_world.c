@@ -1,0 +1,1 @@
+int main(){ puts("Привет, мир!\n"); return 0;}
