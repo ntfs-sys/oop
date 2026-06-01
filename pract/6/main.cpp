@@ -76,6 +76,7 @@ struct std::formatter<String> : formatter<string_view> {
 	}
 };
 
+
 class StringBuilder{
 private:
 	std::string _buffer;
