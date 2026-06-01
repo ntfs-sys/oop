@@ -1,0 +1,29 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "awesome.dir\\Debug\\Character.obj",
+            "outputs": [
+                "C:\\Users\\Rekir\\source\\repos\\s2\\oop_labs\\lab4\\build\\awesome.dir\\Debug\\vc145.pdb",
+                "awesome.dir\\Debug\\",
+                "awesome.dir\\Debug\\Character.ifc"
+            ],
+            "provides": [
+                {
+                    "logical-name": "Character",
+                    "source-path": "c:\\users\\rekir\\source\\repos\\s2\\oop_labs\\lab4\\character.cppm",
+                    "is-interface": true
+                }
+            ],
+            "requires": [
+                {
+                    "logical-name": "std"
+                },
+                {
+                    "logical-name": "gamelib"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,56 @@
+{
+	"bmi-installation" : null,
+	"compiler-frontend-variant" : "GNU",
+	"compiler-id" : "GNU",
+	"compiler-simulate-id" : "",
+	"config" : "",
+	"cxx-modules" : 
+	{
+		"CMakeFiles/__cmake_cxx_std_23.dir/usr/include/c++/16.1.1/bits/std.cc.o" : 
+		{
+			"bmi-only" : false,
+			"compile-features" : 
+			[
+				"cxx_std_23"
+			],
+			"compile-options" : [],
+			"definitions" : [],
+			"destination" : null,
+			"include-directories" : [],
+			"name" : "CXX_MODULES",
+			"relative-directory" : "",
+			"source" : "/usr/include/c++/16.1.1/bits/std.cc",
+			"type" : "CXX_MODULES",
+			"visibility" : "PUBLIC"
+		},
+		"CMakeFiles/__cmake_cxx_std_23.dir/usr/include/c++/16.1.1/bits/std.compat.cc.o" : 
+		{
+			"bmi-only" : false,
+			"compile-features" : 
+			[
+				"cxx_std_23"
+			],
+			"compile-options" : [],
+			"definitions" : [],
+			"destination" : null,
+			"include-directories" : [],
+			"name" : "CXX_MODULES",
+			"relative-directory" : "",
+			"source" : "/usr/include/c++/16.1.1/bits/std.compat.cc",
+			"type" : "CXX_MODULES",
+			"visibility" : "PUBLIC"
+		}
+	},
+	"database-info" : null,
+	"dir-cur-bld" : "/home/ntfs-sys/\u041f\u0440\u043e\u0435\u043a\u0442\u044b/s2/oop-new/labs/lab1/build",
+	"dir-cur-src" : "/home/ntfs-sys/\u041f\u0440\u043e\u0435\u043a\u0442\u044b/s2/oop-new/labs/lab1",
+	"dir-top-bld" : "/home/ntfs-sys/\u041f\u0440\u043e\u0435\u043a\u0442\u044b/s2/oop-new/labs/lab1/build",
+	"dir-top-src" : "/home/ntfs-sys/\u041f\u0440\u043e\u0435\u043a\u0442\u044b/s2/oop-new/labs/lab1",
+	"exports" : [],
+	"forward-modules-from-target-dirs" : [],
+	"include-dirs" : [],
+	"language" : "CXX",
+	"linked-target-dirs" : [],
+	"module-dir" : "/home/ntfs-sys/\u041f\u0440\u043e\u0435\u043a\u0442\u044b/s2/oop-new/labs/lab1/build/CMakeFiles/__cmake_cxx_std_23.dir",
+	"sources" : {}
+}

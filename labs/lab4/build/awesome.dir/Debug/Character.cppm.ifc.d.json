@@ -1,0 +1,19 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\rekir\\source\\repos\\s2\\oop_labs\\lab4\\character.cppm",
+        "ProvidedModule": "Character",
+        "Includes": [],
+        "ImportedModules": [
+            {
+                "Name": "std",
+                "BMI": "C:\\Users\\Rekir\\source\\repos\\s2\\oop_labs\\lab4\\build\\awesome.dir\\Debug\\microsoft\\STL\\std.ixx.ifc"
+            },
+            {
+                "Name": "gamelib",
+                "BMI": "C:\\Users\\Rekir\\source\\repos\\s2\\oop_labs\\lab4\\build\\awesome.dir\\Debug\\gamelib.cppm.ifc"
+            }
+        ],
+        "ImportedHeaderUnits": []
+    }
+}

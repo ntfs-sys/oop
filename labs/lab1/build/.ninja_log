@@ -1,0 +1,25 @@
+# ninja log v7
+2	25	1779138037347111567	CMakeFiles/app.dir/main.cpp.o.ddi	83b540b5d14c0fed
+2	39	1779138037346111606	CMakeFiles/__cmake_cxx_std_23.dir/usr/include/c++/16.1.1/bits/std.compat.cc.o.ddi	2bb36a2c586b1294
+1	532	1779138037345111645	CMakeFiles/__cmake_cxx_std_23.dir/usr/include/c++/16.1.1/bits/std.cc.o.ddi	e38e0e7e1f0d31c7
+532	545	1779138037889143280	CMakeFiles/__cmake_cxx_std_23.dir/CXX.dd	69055534d8b7d8f9
+532	545	1779138037889143280	CMakeFiles/__cmake_cxx_std_23.dir/CXXModules.json	69055534d8b7d8f9
+532	545	1779138037889143280	CMakeFiles/__cmake_cxx_std_23.dir/usr/include/c++/16.1.1/bits/std.cc.o.modmap	69055534d8b7d8f9
+532	545	1779138037889143280	CMakeFiles/__cmake_cxx_std_23.dir/usr/include/c++/16.1.1/bits/std.compat.cc.o.modmap	69055534d8b7d8f9
+546	562	1779138037904933999	CMakeFiles/app.dir/CXX.dd	5a7a31cd2f666893
+546	562	1779138037904933999	CMakeFiles/app.dir/CXXModules.json	5a7a31cd2f666893
+546	562	1779138037904933999	CMakeFiles/app.dir/main.cpp.o.modmap	5a7a31cd2f666893
+546	5364	1779138042705902898	CMakeFiles/__cmake_cxx_std_23.dir/usr/include/c++/16.1.1/bits/std.cc.o	19b0055c665e82eb
+546	5364	1779138042705902898	CMakeFiles/__cmake_cxx_std_23.dir/std.gcm	19b0055c665e82eb
+5365	5696	1779138043038890007	CMakeFiles/__cmake_cxx_std_23.dir/usr/include/c++/16.1.1/bits/std.compat.cc.o	f1510af2e48f56a0
+5365	5696	1779138043038890007	CMakeFiles/__cmake_cxx_std_23.dir/std.compat.gcm	f1510af2e48f56a0
+5696	5754	1779138043039889968	lib__cmake_cxx_std_23.a	99757defe5d97901
+5365	6603	1779138042709739352	CMakeFiles/app.dir/main.cpp.o	2c6ef4a001ca0781
+6603	6680	1779138043946854928	app	55e9336c7a4334b9
+3	23	1779138919540405506	CMakeFiles/__cmake_cxx_std_23.dir/CXX.dd	69055534d8b7d8f9
+3	23	1779138919540405506	CMakeFiles/__cmake_cxx_std_23.dir/CXXModules.json	69055534d8b7d8f9
+3	23	1779138919540405506	CMakeFiles/__cmake_cxx_std_23.dir/usr/include/c++/16.1.1/bits/std.cc.o.modmap	69055534d8b7d8f9
+3	23	1779138919540405506	CMakeFiles/__cmake_cxx_std_23.dir/usr/include/c++/16.1.1/bits/std.compat.cc.o.modmap	69055534d8b7d8f9
+24	43	1779138919561405462	CMakeFiles/app.dir/CXX.dd	5a7a31cd2f666893
+24	43	1779138919561405462	CMakeFiles/app.dir/CXXModules.json	5a7a31cd2f666893
+24	43	1779138919561405462	CMakeFiles/app.dir/main.cpp.o.modmap	5a7a31cd2f666893

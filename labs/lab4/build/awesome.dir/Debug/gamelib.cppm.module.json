@@ -1,0 +1,26 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "awesome.dir\\Debug\\gamelib.obj",
+            "outputs": [
+                "C:\\Users\\Rekir\\source\\repos\\s2\\oop_labs\\lab4\\build\\awesome.dir\\Debug\\vc145.pdb",
+                "awesome.dir\\Debug\\",
+                "awesome.dir\\Debug\\gamelib.ifc"
+            ],
+            "provides": [
+                {
+                    "logical-name": "gamelib",
+                    "source-path": "c:\\users\\rekir\\source\\repos\\s2\\oop_labs\\lab4\\gamelib.cppm",
+                    "is-interface": true
+                }
+            ],
+            "requires": [
+                {
+                    "logical-name": "std"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,36 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "awesome.dir\\Debug\\main.obj",
+            "outputs": [
+                "C:\\Users\\Rekir\\source\\repos\\s2\\oop_labs\\lab4\\build\\awesome.dir\\Debug\\vc145.pdb",
+                "awesome.dir\\Debug\\"
+            ],
+            "requires": [
+                {
+                    "logical-name": "std"
+                },
+                {
+                    "logical-name": "Character"
+                },
+                {
+                    "logical-name": "gamelib"
+                },
+                {
+                    "logical-name": "Earthmover"
+                },
+                {
+                    "logical-name": "V_model"
+                },
+                {
+                    "logical-name": "Angel"
+                },
+                {
+                    "logical-name": "Something_wicked"
+                }
+            ]
+        }
+    ]
+}

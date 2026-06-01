@@ -1,0 +1,39 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\rekir\\source\\repos\\s2\\oop_labs\\lab4\\main.cpp",
+        "ProvidedModule": "",
+        "Includes": [],
+        "ImportedModules": [
+            {
+                "Name": "std",
+                "BMI": "C:\\Users\\Rekir\\source\\repos\\s2\\oop_labs\\lab4\\build\\awesome.dir\\Debug\\microsoft\\STL\\std.ixx.ifc"
+            },
+            {
+                "Name": "Character",
+                "BMI": "C:\\Users\\Rekir\\source\\repos\\s2\\oop_labs\\lab4\\build\\awesome.dir\\Debug\\Character.cppm.ifc"
+            },
+            {
+                "Name": "gamelib",
+                "BMI": "C:\\Users\\Rekir\\source\\repos\\s2\\oop_labs\\lab4\\build\\awesome.dir\\Debug\\gamelib.cppm.ifc"
+            },
+            {
+                "Name": "Earthmover",
+                "BMI": "C:\\Users\\Rekir\\source\\repos\\s2\\oop_labs\\lab4\\build\\awesome.dir\\Debug\\Earthmover.cppm.ifc"
+            },
+            {
+                "Name": "V_model",
+                "BMI": "C:\\Users\\Rekir\\source\\repos\\s2\\oop_labs\\lab4\\build\\awesome.dir\\Debug\\V_model.cppm.ifc"
+            },
+            {
+                "Name": "Angel",
+                "BMI": "C:\\Users\\Rekir\\source\\repos\\s2\\oop_labs\\lab4\\build\\awesome.dir\\Debug\\Angel.cppm.ifc"
+            },
+            {
+                "Name": "Something_wicked",
+                "BMI": "C:\\Users\\Rekir\\source\\repos\\s2\\oop_labs\\lab4\\build\\awesome.dir\\Debug\\Something_wicked.cppm.ifc"
+            }
+        ],
+        "ImportedHeaderUnits": []
+    }
+}

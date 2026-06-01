@@ -1,0 +1,19 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\rekir\\source\\repos\\s2\\oop_labs\\lab4\\v_model.cppm",
+        "ProvidedModule": "V_model",
+        "Includes": [],
+        "ImportedModules": [
+            {
+                "Name": "std",
+                "BMI": "C:\\Users\\Rekir\\source\\repos\\s2\\oop_labs\\lab4\\build\\awesome.dir\\Debug\\microsoft\\STL\\std.ixx.ifc"
+            },
+            {
+                "Name": "Character",
+                "BMI": "C:\\Users\\Rekir\\source\\repos\\s2\\oop_labs\\lab4\\build\\awesome.dir\\Debug\\Character.cppm.ifc"
+            }
+        ],
+        "ImportedHeaderUnits": []
+    }
+}

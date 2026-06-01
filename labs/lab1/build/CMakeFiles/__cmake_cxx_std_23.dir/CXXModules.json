@@ -1,0 +1,35 @@
+{
+	"modules" : 
+	{
+		"std" : 
+		{
+			"bmi" : "/home/ntfs-sys/\u041f\u0440\u043e\u0435\u043a\u0442\u044b/s2/oop-new/labs/lab1/build/CMakeFiles/__cmake_cxx_std_23.dir/std.gcm",
+			"is-private" : false
+		},
+		"std.compat" : 
+		{
+			"bmi" : "/home/ntfs-sys/\u041f\u0440\u043e\u0435\u043a\u0442\u044b/s2/oop-new/labs/lab1/build/CMakeFiles/__cmake_cxx_std_23.dir/std.compat.gcm",
+			"is-private" : false
+		}
+	},
+	"references" : 
+	{
+		"std" : 
+		{
+			"lookup-method" : "by-name",
+			"path" : "CMakeFiles/__cmake_cxx_std_23.dir/std.gcm"
+		},
+		"std.compat" : 
+		{
+			"lookup-method" : "by-name",
+			"path" : "CMakeFiles/__cmake_cxx_std_23.dir/std.compat.gcm"
+		}
+	},
+	"usages" : 
+	{
+		"std.compat" : 
+		[
+			"std"
+		]
+	}
+}
