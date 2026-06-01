@@ -1,2 +1,0 @@
-/home/ntfs-sys/Проекты/s2/oop-new/build/CMakeFiles/edit_cache.dir
-/home/ntfs-sys/Проекты/s2/oop-new/build/CMakeFiles/rebuild_cache.dir
