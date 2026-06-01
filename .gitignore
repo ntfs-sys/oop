@@ -1,1 +1,4 @@
 **/build-linux/
+**/build/
+**/build-win/
+**/.vs/
