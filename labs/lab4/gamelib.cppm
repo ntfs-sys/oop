@@ -48,12 +48,14 @@ export int input_int(const std::string& prompt, int min, int max) {
     }
 }
 
-std::mt19937 rng{std::random_device{}()};
-
-export int random_int(int min, int max) {
-	std::uniform_int_distribution<int> dist(min, max);
-	return dist(rng);
+export bool prob_aprox(int prob) {
+    static std::random_device rd;
+    static std::mt19937 gen(rd());
+    static std::uniform_int_distribution<int> dis(0, 10);
+    return dis(gen) < prob;
 }
+
+
 export void hello(int num){
 		std::println("--------------------\n\
       LW: {}\n\

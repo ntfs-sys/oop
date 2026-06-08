@@ -7,7 +7,7 @@ public:
 	using Character::Character;
 	
 	int deal_damage(Character& enemy) {
-		int dmg = enemy.input_damage(_damage * (1 + take_less_damage()*_random_dodge));
+		int dmg = enemy.input_damage(_damage * (1 + prob_aprox(_dodge_prob)*_random_dodge));
 		return dmg;
 	}
 	

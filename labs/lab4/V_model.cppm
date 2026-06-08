@@ -15,7 +15,7 @@ public:
 	}
 	
 	int deal_damage(Character& enemy) {
-		int dmg = enemy.input_damage(get_damage()* ( 1 + take_less_damage()*_add_armor));
+		int dmg = enemy.input_damage(get_damage()* ( 1 + prob_aprox(_dodge_prob)*_add_armor));
 		if(_skill_active){
 			_health += dmg;
 		}

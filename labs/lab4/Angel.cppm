@@ -15,7 +15,7 @@ public:
 		if(damage - _armor < 0 ){
 			return 0;
 		}
-		int real_damage = (damage - _armor) / (1 + take_less_damage()*_random_dodge);
+		int real_damage = (damage - _armor) / (1 + prob_aprox(_dodge_prob)*_random_dodge);
 		_health -= real_damage;
 		return real_damage;
 	}

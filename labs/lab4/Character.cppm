@@ -22,18 +22,12 @@ protected:
 	int _recoil = 5;
 	int	_use_skill = 0;
 	bool _skill_active = 0;
-	
-	bool take_less_damage() {
-		return random_int(1,10) <= _dodge_prob;
-	}
-	
+		
 public:
 
-	
-
-
 	Character() = delete;
-
+	virtual ~Character() = default;
+	
 	explicit Character(std::string name, int health, int armor, int damage, int dodge_prob, int add_armor, int recoil) :
 
 		_name(name),
@@ -45,22 +39,22 @@ public:
 		_recoil(recoil) {}
 
 
-	int get_health() {
+	int get_health() const {
 		return _health;
 	}
 
-	int get_armor() {
+	int get_armor() const {
 		return _armor;
 	}
 
-	int get_damage() {
+	int get_damage() const {
 		return _damage;
 	}
 	
-	int get_use_skill() {
+	int get_use_skill() const {
 		return _use_skill;
 	}
-	std::string get_name() {
+	std::string get_name() const {
 		return _name;
 	}
 	

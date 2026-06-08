@@ -48,17 +48,17 @@ public:
         }
     }
     
-    bool is_alive() {
+    bool is_alive() const {
         return _health > 0;
     }
     
-    int get_damage() {
+    int get_damage() const {
         return _damage;
     }
-    int get_health() {
+    int get_health() const {
     	return _health;
     }
-    int get_skill() {
+    int get_skill() const {
     	return _skill
     }
 };
