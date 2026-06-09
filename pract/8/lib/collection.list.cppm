@@ -5,21 +5,22 @@ import std;
 export template<typename T>
 class ListEnumerator : public IEnumerator<T> {
 private:
-	const std::vector<T>& _vec;
+	std::vector<T>& _vec;
 	int _index = -1;
 public:
-	ListEnumerator(const std::vector<T>& vec) : _vec(vec){
-		//_vec = vec;
-	}
-	bool MoveNext() {
-		if (_index < static_cast<int>(_vec.size()) - 1)
-		{
+	ListEnumerator(std::vector<T>& vec) : _vec(vec){}
+
+    bool MoveNext() override {
+		if(_index + 1 < std::static_cast<int>(_vec.size())){
 			_index++;
-			return true;
+			return 1;
 		}
-		return false;
+		return 0;
 	}
-	 const T& Current() const {
+    T Current() override {
+		if(_index < 0 || _index >= std::static_cast<int>(_vec.size())){
+			throw std::logic_error("invalid iterator position");
+		}
 		return _vec[_index];
 	}
 };
@@ -34,54 +35,53 @@ public:
 	std::unique_ptr<IEnumerator<T>> GetEnumerator() const override {
 		return std::make_unique <ListEnumerator<T>>(_collection);
 	}
-	int Count()const override {
+    int Count() const {
 		return _collection.size();
 	}
-	void Add(T item)override {
+    void Add(const T& item){
 		_collection.push_back(item);
 	}
-	void Clear()override {
+    void Clear() {
 		_collection.clear();
 	}
-	bool Contains(T item) const override {
-		return std::find(_collection.begin(), _collection.end(), item) != _collection.end();
-	}
-	bool Remove(T item) override {
-		auto it = std::find(_collection.begin(), _collection.end(), item);
-		if (it != _collection.end()) {
-			_collection.erase(it);
-			return true;
+    bool Contains(const T& item){
+		if(std::find(_collection.begin(), _collection.end(), item) != _collection.end()){
+			return 1;
 		}
-		return false;
+		return 0;
 	}
-	int Capacity() const {
+	bool Remove(const T& item) override {
+    	auto it = std::find(_collection.begin(), _collection.end(), item);
+    	if (it != _collection.end()) {
+        	_collection.erase(it);
+        	return true;
+    	}
+    	return false;
+	}
+	int Capacity(){
 		return _collection.capacity();
 	}
-	void SetCapacity(int capacity) {
+  	void SetCapacity(int capacity){
 		_collection.reserve(capacity);
 	}
-	T operator[](int idx) const {
-		if (idx < 0 || idx >= _collection.size()) {
-			throw std::out_of_range("Индекс вышел за границы");
-		}
-		return _collection[idx];
+
+	T& operator[](size_t index) {
+    	if (index >= _collection.size()) throw std::out_of_range("Index out of range");
+    	return _collection[index];
 	}
-	T& operator[](int idx) {
-		if (idx < 0 || idx >= _collection.size()) {
-			throw std::out_of_range("Индекс вышел за границы");
-		}
-		return _collection[idx];
+	const T& operator[](size_t index) const {
+    	if (index >= _collection.size()) throw std::out_of_range("Index out of range");
+	    return _collection[index];
 	}
-	void Insert(int idx, T item) {
-		if (idx < 0 || idx > _collection.size()) {
-			throw std::out_of_range("Индекс вышел за границы");
-		}
-		_collection.insert(_collection.begin() + idx, item);
+
+	void Insert(int index, const T& item) {
+    	if (index < 0 || index > static_cast<int>(_collection.size()))
+        	throw std::out_of_range("Index out of range");
+    	_collection.insert(_collection.begin() + index, item);
 	}
-	void RemoveAt(int idx) {
-		if (idx < 0 || idx >= _collection.size()) {
-			throw std::out_of_range("Индекс вышел за границы");
-		}
-		_collection.erase(_collection.begin() + idx);
+	void RemoveAt(int index) override {
+    	if (index < 0 || index >= static_cast<int>(_collection.size()))
+        	throw std::out_of_range("Index out of range");
+    	_collection.erase(_collection.begin() + index);
 	}
 };
