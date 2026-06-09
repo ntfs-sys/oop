@@ -94,16 +94,17 @@ Fraction operator*(const Fraction& lf, const Fraction& rf) {
 	return result;
 }
 
+std::ostream& operator<<(std::ostream& os, const Fraction& fr){
+	os << fr.get_numerator() << '/' << fr.get_denominator();
+	return os;
+}
+
 std::string frstr(const Fraction& fr) {
 	std::stringstream str;
 	str << fr;
 	return str.str();
 }
 
-std::ostream& operator<<(std::ostream& os, const Fraction& fr){
-	os << fr.get_numerator() << '/' << fr.get_denominator();
-	return os;
-}
 
 void frfile(std::string path, const Fraction& fr){
 	std::ofstream out(path);

@@ -43,3 +43,4 @@ std::size_t digit_summ(std::size_t number) {
 	}
 	return number % 10 + digit_summ(number / 10);
 }
+int main(){return 0;}

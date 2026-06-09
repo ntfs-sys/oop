@@ -6,5 +6,5 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
   
 project("oop" LANGUAGES CXX)
 
-#add_subdirectory("pract")
-#add_subdirectory("labs")
+add_subdirectory("pract")
+add_subdirectory("labs")

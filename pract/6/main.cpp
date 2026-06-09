@@ -1,7 +1,9 @@
+import std;
+
 class String {
 private:
     char* _data = nullptr;
-    size_t _size = 0;
+    std::size_t _size = 0;
     
     void copy_from(const char* str){
     	_size = std::strlen(str);
@@ -49,9 +51,9 @@ public:
     	return *this;
     }
 
-    const char* data(){ return _data; }
+    const char* Sdata() const { return _data; }
 
-    size_t size() const { return _size; }
+    std::size_t size() const { return _size; }
 /*  
     char& operator[](size_t index){
     	return index < _size ? _data[index] : throw std::out_of_range();
@@ -62,7 +64,7 @@ public:
 */
 
     template<typename Self>
-    auto&& operator[](this Self&& self, size_t index) {
+    auto&& operator[](this Self&& self, std::size_t index) {
     	return std::forward<Self>(self)._data[index];
     }
 };
@@ -72,7 +74,7 @@ public:
 template<>
 struct std::formatter<String> : formatter<string_view> {
 	auto format(const String& s, format_context& ctx) const {
-		return formatter<string_view>::format({s.data(), s.size()}, ctx);
+		return formatter<string_view>::format({s.Sdata(), s.size()}, ctx);
 	}
 };
 
