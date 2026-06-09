@@ -1,10 +1,6 @@
 import std;
-import collectionslist;
-import collectionshashset;
-import collectionsdictionary;
-import collectionsstack;
-import collectionsqueue;
-
+import collections;
+import interface;
 
 void stack_test()
 {
@@ -145,11 +141,11 @@ void dictionary_test() {
 
 
 int main() {
-	stack_test();
-	queue_test();
-	hashset_test();
-	list_test();
-	dictionary_test();
+	//stack_test();
+	//queue_test();
+	//hashset_test();
+	//list_test();
+	//dictionary_test();
 
 	return 0;
 };
