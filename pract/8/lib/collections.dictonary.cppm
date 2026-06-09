@@ -5,26 +5,26 @@ import std;
 
 export template<typename TKey, typename TValue>
 class DictionaryEnumerator : public IEnumerator<std::pair<const TKey, TValue>> {
+private:
 	typename std::unordered_map<TKey, TValue>::const_iterator _iter;
 	typename std::unordered_map<TKey, TValue>::const_iterator _end;
-	bool isfirst=true;
+	bool _isfirst=true;
 public:
 	DictionaryEnumerator(const std::unordered_map<TKey, TValue>& map) {
-		_iter = map.begin();
-		_end = map.end();
+		_iter=map.begin();
+		_end=map.end();
 	}
-	bool MoveNext() {
-		if (isfirst) {
-			isfirst = false;
+	bool MoveNext(){
+		if(_isfirst){
+			_isfirst = 0;
 			return _iter != _end;
 		}
 		_iter++;
-		return _iter!=_end;
+		return _iter != _end;
 	}
-
 	const std::pair<const TKey, TValue>& Current() const {
-		if (_iter == _end) {
-			throw std::out_of_range("Конец множества");
+		if(_iter == _end){
+			throw std::out_of_range("end of dictonary");
 		}
 		return *_iter;
 	}
@@ -47,42 +47,35 @@ export template<typename TKey, typename TValue, typename Hash = std::hash<TKey>,
 			_map.clear();
 		}
 		bool Contains(std::pair<const TKey, TValue> item) const override {
-			return _map.contains(item.first);
+			auto it = _map.find(item.first);
+			return it != _map.end() && it->second == item.second;
 		}
 		bool Remove(std::pair<const TKey, TValue> item) override {
-			if (_map.contains(item.first)) {
+			if(Contains(item)){
 				_map.erase(item.first);
-				return true;
+				return 1;
 			}
-			return false;
+			else return 0;
 		}
 		int Capacity() const {
 			return _map.bucket_count();
-
 		}
 		void SetCapacity(int capacity) {
-			if (capacity <= 0) {
-				throw std::invalid_argument("Неверный аргумент");
-			}
 			_map.reserve(capacity);
-
 		}
 		TValue operator[](const TKey & key) const {
-			if (!_map.contains(key)) {
-				throw std::invalid_argument("Такого ключа не существует");
-
+			if(_map.contains(key)){
+				return _map.at(key);
 			}
-			return _map.at(key);
+			throw std::out_of_range("not in dictonary");
 		}
-
 		TValue& operator[](const TKey & key) {
-			if (!_map.contains(key)) {
-				throw std::invalid_argument("Такого ключа не существует");
-
+			if(_map.contains(key)){
+				return _map.at(key);
 			}
-			return _map.at(key);
+			throw std::out_of_range("not in dictonary");
 		}
 		std::unique_ptr<IEnumerator<std::pair<const TKey, TValue>>> GetEnumerator() const override {
-			return std::make_unique <DictionaryEnumerator<TKey, TValue>>(_map);
+			return std::make_unique<DictionaryEnumerator<TKey, TValue>>(_map);
 		}
 };

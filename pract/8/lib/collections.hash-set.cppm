@@ -23,7 +23,7 @@ public:
 
 	const T& Current() const {
 		if (_iter == _end) {
-			throw std::out_of_range("Конец множества");
+			throw std::out_of_range("end of hashset");
 		}
 		return *_iter;
 	}

@@ -5,118 +5,151 @@ import collectionsdictionary;
 import collectionsstack;
 import collectionsqueue;
 
-void DictionaryTest() {
-	Dictionary<std::string, int> d;
-	d.Add({ "apple", 1 });
-	d.Add({ "banana", 2 });
-	d.Add({ "cherry", 3 });
-	std::println("[Add/Count] Добавлено 3 элемента: {}", d.Count());
-	std::println("[Contains] 'apple': {}", d.Contains({ "apple",1 }));
-	std::println("[Remove] Удаление 'banana': {}", d.Remove({ "banana",2 }));
-	d["apple"] = 4;
-	std::println("[opeator[]] Значение 'apple': {}", d["apple"]);
-	std::println("Old capacity: {}", d.Capacity());
-	d.SetCapacity(15);
-	std::println("New capacity: {}", d.Capacity());
-	auto enumerator = d.GetEnumerator();
-	while (enumerator->MoveNext()) {
-		std::println("[Enumerator] {} -> {}", enumerator->Current().first, enumerator->Current().second);
-	}
-	d.Clear();
-	std::println("[Clear] Count после Clear: {} ", d.Count());
-}
 
-void ListsTest() {
-	List<int> test;
-	test.Add(5);
-	test.Add(10);
-	test.Add(12);
-	std::println("Count = {}, Contains(10) = {}, Capacity = {}", test.Count(), test.Contains(10), test.Capacity());
-	test[1] = 13;
-	std::println("test[1]: {}", test[1]);
-	test.Remove(5);
-	test.RemoveAt(0);
-	test.Insert(1, 18);
-	std::println("{}", test.Count());
-	test.SetCapacity(10);
-	std::println("New capacity = {}", test.Capacity());
+void stack_test()
+{
+	std::println("Stack Example");
 
-	auto enumerator = test.GetEnumerator();
-	while (enumerator->MoveNext()) {
-		std::println("[Enumerator] {}", enumerator->Current());
-	}
-	test.Clear();
-	std::println("Count после Clear: {}", test.Count());
-}
-
-void HashSetTest() {
-	HashSet<int> set;
-	set.SetCapacity(10);
-	std::println("Ёмкость (bucket_count): {}", set.Capacity());
-	set.Add(5);
-	set.Add(10);
-	set.Add(15);
-	set.Add(10);
-	std::println("Кол-во элементов после Add: {}", set.Count());
-	std::println("Содержит 10?: {}", set.Contains(10));
-	std::println("Содержит 20?: {}", set.Contains(20));
-	std::println("Удаление 10: {}", set.Remove(10));
-	std::println("Кол-во: {}", set.Count());
-	std::println("Элементы мн-ва через итератор: ");
-	auto enumerator = set.GetEnumerator();
-	while (enumerator->MoveNext()) {
-		std::println("[Enumerator] {}", enumerator->Current());
-	}
-	set.Clear();
-	std::println("Count после Clear: {}", set.Count());
-}
-
-void StackTest() {
 	Stack<int> stack;
-	std::println("Начальный размер: {}", stack.Count());
-
-	std::println("Тест Push");
 	stack.Push(10);
+	stack.Push(1);
 	stack.Push(20);
-	stack.Push(30);
 
-	std::println("Count после добавления: {}", stack.Count());
-	std::println("Верхний элемент: {}", stack.Peek());
-
-	std::println("Удаляемый элемент: {}", stack.Pop());
-
-	auto enumerator = stack.GetEnumerator();
-	while (enumerator->MoveNext()) {
-		std::println("[Enumerator] {}", enumerator->Current());
+	auto it = stack.GetEnumerator();
+	while (it->MoveNext())
+	{
+		std::println("{}", it->Current());
 	}
+
+	std::println("Pop {}", stack.Pop());
+	std::println("Peek {}", stack.Peek());
+	std::println("Count {}", stack.Count());
+	std::println("-------------------------\n");
+
+	return;
 }
 
+void queue_test() {
+	std::println("Queue Example");
 
-void QueueTest() {
 	Queue<int> queue;
-	std::println("Начальное количество:{}", queue.Count());
-	std::println("Тест Enqueue");
-	queue.Enqueue(10);
-	queue.Enqueue(20);
-	queue.Enqueue(30);
 
-	std::println("Count после добавления: {}", queue.Count());
-	std::println("первый элемент:{}", queue.Peek());
+	queue.Enqueue(1);
+	queue.Enqueue(2);
+	queue.Enqueue(3);
 
-	std::println("удаляемый элемент: {}", queue.Dequeue());
+	auto it = queue.GetEnumerator();
 
-	auto enumerator = queue.GetEnumerator();
-	while (enumerator->MoveNext()) {
-		std::println("[Enumerator] {}", enumerator->Current());
+	while (it->MoveNext()) {
+		std::println("{}", it->Current());
 	}
 
+	std::println("Dequeue: {}", queue.Dequeue());
+	std::println("Peek: {}", queue.Peek());
+	std::println("Count: {}", queue.Count());
 }
+
+void hashset_test() {
+	HashSet<std::string> names;
+
+	names.Add("Fedor");
+	names.Add("Masha");
+	names.Add("Dima");
+	names.Add("Sergey");
+
+	std::println("Чиcло имнен: {}", names.Count());
+	std::println("Проверка метода Contains с помощью \"Fedor\"{}", names.Contains("Fedor"));
+	if (names.Remove("Fedor")) {
+
+		std::println("Им Fedor удалено");
+	}
+
+	names.SetCapacity(100);
+	std::println("Текущая ёмкость коллекции: {}", names.Capacity());
+
+
+	auto it = names.GetEnumerator();
+	while (it->MoveNext())
+	{
+		std::println("{}", it->Current());
+	}
+	names.Clear();
+}
+
+void list_test()
+{
+	List<int> list;
+	list.Add(10);
+	list.Add(20);
+	list.Add(30);
+	list.Add(40);
+
+	list.Insert(0, 50);
+	list.RemoveAt(4);
+	std::println("размер: {}", list.Count());
+	std::println("ёмкость: {}", list.Capacity());
+	list.SetCapacity(25);
+	std::println("ёмкость: {}", list.Capacity());
+	if (list.Contains(20)) 
+	{
+		std::println("20 есть");
+	}
+	list[0] = 66;
+	std::println("1 элемент: {}", list[0]);
+	list.Remove(40);
+	auto it = list.GetEnumerator();
+	while (it->MoveNext())
+	{
+		std::println("{}", it->Current());
+	}
+	list.Clear();
+	std::println("после очистики: {}", list.Count());
+
+}
+
+void dictionary_test() {
+
+	Dictionary<std::string, int> d;
+
+	d.Add({ "key1",1 });
+	d.Add({ "key2",2 });
+	d.Add({ "key3",3 });
+
+	std::println("Элементов в словаре: {}", d.Count());
+
+	d["key1"] = 10;
+
+	if (d.Contains({ "key1", 10 }))
+		std::println("Содержит элемент (\"key1\", {})", d["key1"]);
+
+	if (d.Remove({ "key2",2 }))
+		std::println("Удалён элемент (\"key2\", 2)");
+
+	const std::size_t test_capacity = 10;
+
+	d.SetCapacity(test_capacity);
+
+	std::println("Предполагаемая ёмкость: {}, установленна ёскость: {}", test_capacity, d.Capacity());
+
+	auto it = d.GetEnumerator();
+	while (it->MoveNext())
+	{
+		std::println("({}, {})", it->Current().first, it->Current().second);
+	}
+
+	d.Clear();
+
+	std::println("Размер после очистки: {}", d.Count());
+}
+
+
 
 int main() {
-	DictionaryTest();
-	ListsTest();
-	HashSetTest();
-	StackTest();
-	QueueTest();
+	stack_test();
+	queue_test();
+	hashset_test();
+	list_test();
+	dictionary_test();
+
 	return 0;
 };

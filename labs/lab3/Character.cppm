@@ -59,6 +59,6 @@ public:
     	return _health;
     }
     int get_skill() const {
-    	return _skill
+    	return _skill;
     }
 };

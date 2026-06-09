@@ -6,7 +6,12 @@ export class Character {
 
 protected:
 
-	
+	bool prob_aprox(int prob) {
+    static std::random_device rd;
+    static std::mt19937 gen(rd());
+    static std::uniform_int_distribution<int> dis(0, 10);
+    return dis(gen) < prob;
+}
 	std::string _name;
 
 	int _health = 1;

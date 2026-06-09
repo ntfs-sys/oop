@@ -22,12 +22,12 @@ export std::unordered_map<std::string, int> get_freq(
 std::string normalyse(const std::string& string) {
     std::string result;
     for (char c : string) {
-        result += std::tolower(unsigned char(c));
+        result += std::tolower(char(c));
     }
-    while (!result.empty() && !std::isalpha(unsigned char(result.front()))) {
+    while (!result.empty() && !std::isalpha(char(result.front()))) {
         result.erase(result.begin());
     }
-    while (!result.empty() && !std::isalpha(unsigned char(result.back()))) {
+    while (!result.empty() && !std::isalpha(char(result.back()))) {
         result.pop_back();
     }
     return result;
@@ -50,7 +50,7 @@ export std::vector<std::string> load_words(const std::string& path) {
     return words;
 }
 
-export size_t count_unique(
+export std::size_t count_unique(
     const std::vector<std::string>& words,
     const std::unordered_set<std::string>& stop_words
 ) {

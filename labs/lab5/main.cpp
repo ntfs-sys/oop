@@ -17,7 +17,7 @@ int main() {
 
     std::println("Всего слов: {}", words.size());
 
-    size_t unique = count_unique(words, stop_words);
+    std::size_t unique = count_unique(words, stop_words);
     std::println("Уникальных слов (без стоп-слов): {}", unique);
 
     auto freq = get_freq(words, stop_words);

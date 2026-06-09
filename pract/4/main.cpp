@@ -5,16 +5,16 @@ private:
 	int _numerator;
 	int _denominator;	
 	void normalyse(){
-		//I1
+		
 		if (_numerator == 0) {
 			_denominator = 1;
 		}
-		//I3
+		
 		if ( _denominator < 0) {
 			_denominator *= -1;
 			_numerator *= -1;
 		}
-		//I2
+		
 		int gcd = std::gcd(_numerator, _denominator);
 		_numerator = _numerator / gcd;
 		_denominator = _denominator / gcd;

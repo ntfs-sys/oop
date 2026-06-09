@@ -48,12 +48,7 @@ export int input_int(const std::string& prompt, int min, int max) {
     }
 }
 
-export bool prob_aprox(int prob) {
-    static std::random_device rd;
-    static std::mt19937 gen(rd());
-    static std::uniform_int_distribution<int> dis(0, 10);
-    return dis(gen) < prob;
-}
+
 
 
 export void hello(int num){

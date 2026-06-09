@@ -23,7 +23,7 @@ public:
 	}
 	const T& Current() const override {
 		if (_stack.empty()) {
-			throw std::out_of_range("Отсутсвует текущий элемент");
+			throw std::out_of_range("got no element");
 		}
 		return _stack.top();
 	}
