@@ -83,6 +83,7 @@ export std::string normalyse(std::string& word){
 export std::vector<std::string> load_words( const std::string& path){
     std::ifstream file(path);
     if (!file.is_open()){
+        std::println("not found");
         return {};
     }
     std::vector<std::string> result;
