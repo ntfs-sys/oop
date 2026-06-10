@@ -137,7 +137,7 @@ int main() {
     std::println("sb1 всё ещё можно использовать: '{}'", sb1.build());
     
     StringBuilder sb2;
-    sb2.append("Pi ≈ ").append(3.14159f);
+    sb2.append("Pi = ").append(3.14159f);
     std::string result2 = std::move(sb2).build();
     std::println("std::move(sb2).build(): '{}'", result2);
     
