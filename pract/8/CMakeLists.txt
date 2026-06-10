@@ -7,6 +7,4 @@ set(CMAKE_CXX_MODULE_STD ON)
 
 project("Practice8")
 
-
-
 add_subdirectory("task1")
