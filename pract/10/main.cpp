@@ -21,8 +21,13 @@ int main() {
                             sf::Style::Titlebar | sf::Style::Close | sf::Style::Resize);
     
     sf::Font font;
-    if (!font.openFromFile("/usr/share/fonts/TTF/DejaVuSans-Bold.ttf")) {
-        return -1;
+    std::string fontPath = "/usr/share/fonts/TTF/DejaVuSans-Bold.ttf";
+    if (!font.openFromFile(fontPath)) {
+    
+        fontPath = "C:\\Windows\\Fonts\\Arial.ttf";
+        if (!font.openFromFile(fontPath)) {
+            return -1;
+        }
     }
     
     sf::Text text(font, message);
