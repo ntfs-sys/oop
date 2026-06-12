@@ -1,7 +1,4 @@
-cmake_minimum_required(VERSION 4.2)
-set(CMAKE_CXX_MODULE_STD ON)
-set(CMAKE_EXPERIMENTAL_CXX_IMPORT_STD "451f2fe2-a8a2-47c3-bc32-94786d8fc91b")
-project(lab2 CXX)
+project(lab2)
 add_executable(Practice6)
 target_compile_features(Practice6 PUBLIC cxx_std_23)
 

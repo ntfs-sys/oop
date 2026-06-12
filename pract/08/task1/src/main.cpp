@@ -141,11 +141,11 @@ void dictionary_test() {
 
 
 int main() {
-	//stack_test();
-	//queue_test();
-	//hashset_test();
-	//list_test();
-	//dictionary_test();
+	stack_test();
+	queue_test();
+	hashset_test();
+	list_test();
+	dictionary_test();
 
 	return 0;
 };
